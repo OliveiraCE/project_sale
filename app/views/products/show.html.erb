@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Produto Cadastrado</h1>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @product.stuff %>
+</p>
+
+<p>
+  <strong>Descrição:</strong>
+  <%= @product.description %>
+</p>
+
+<p>
+  <strong>Preço:</strong>
+  <%= @product.price %>
+</p>
+
+<%= link_to 'Editar', edit_product_path(@product), class: "btn btn-primary btn-lg", role: "button" %> |
+<%= link_to 'Voltar', products_path, class: "btn btn-primary btn-lg", role: "button" %>

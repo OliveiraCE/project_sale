@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Informações do Cliente:</h1>
+
+<p>
+  <strong>Fullname:</strong>
+  <%= @client.fullname %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @client.email %>
+</p>
+
+<p>
+  <strong>Birthday:</strong>
+  <%= @client.birthday %>
+</p>
+
+
+<%= link_to 'Editar', edit_client_path(@client), class: "btn btn-primary btn-sm", role: "button" %> |
+<%= link_to 'Voltar', clients_path , class: "btn btn-primary btn-sm", role: "button" %>

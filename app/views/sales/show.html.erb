@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Venda Registrada:</h1>
+
+<p>
+  <strong>Número:</strong>
+  <%= @sale.id %>
+</p>
+
+<p>
+  <strong>Cliente:</strong>
+  <%= @sale.client.fullname %>
+</p>
+
+<p>
+  <ul>
+		<% @sale.products.each do |product| %>
+			<li><%= product.stuff %></li>
+		<% end %>
+	</ul>
+</p>
+
+
+<%= link_to 'Editar', edit_sale_path(@sale), class: "btn btn-primary btn-sm", role: "button" %> |
+<%= link_to 'Voltar', sales_path, class: "btn btn-primary btn-sm", role: "button" %>
